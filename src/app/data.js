@@ -17,5 +17,5 @@ export const hero = {
   id: 1,
   title: "A city of community",
   description:
-    "Find peace and comfort inoijlkhjlkhjkhn a housing community designed for family happiness. With lush surroundings, modern amenities, and a friendly neighborhood, every day feels like a vacation.",
+    "Find peace and comfort a housing community designed for family happiness. With lush surroundings, modern amenities, and a friendly neighborhood, every day feels like a vacation.",
 };
