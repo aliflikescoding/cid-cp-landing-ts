@@ -31,9 +31,12 @@ const NavList: React.FC<NavListProps> = ({ listItems, title }) => {
           >
             {title} {open ? <FaChevronUp /> : <FaChevronDown />}
             <span
-              className={`absolute left-0 bottom-0 w-${
-                open ? "full" : "0"
-              } h-[2px] transition-all duration-300 ease-in-out ${
+              className={`absolute left-0 bottom-0 h-[2px] transition-all duration-300 ease-in-out ${
+                isActive ? "bg-primary" : "bg-text"
+              } ${open ? "w-full" : "w-0"}`} // Explicitly use w-full and w-0
+            ></span>
+            <span
+              className={`absolute left-0 bottom-0 w-0 h-[2px] transition-all duration-500 ease-in-out group-hover:w-full ${
                 isActive ? "bg-primary" : "bg-text"
               }`}
             ></span>
