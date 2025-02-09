@@ -6,7 +6,16 @@ import Image from "next/image";
 import Link from "next/link";
 import NavLinks from "@/components/ui/NavLinks";
 
-const NavBar: React.FC = () => {
+interface ListItem {
+  id: number;
+  name: string;
+}
+
+interface NavBarProps {
+  clusterNames: ListItem[];
+}
+
+const NavBar: React.FC<NavBarProps> = ({ clusterNames }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -53,7 +62,7 @@ const NavBar: React.FC = () => {
             className="w-auto h-full max-w-[135px]"
           />
         </Link>
-        <NavLinks />
+        <NavLinks clusterNames={clusterNames} />
       </CustomContainer>
     </div>
   );

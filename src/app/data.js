@@ -19,3 +19,59 @@ export const hero = {
   description:
     "Find peace and comfort a housing community designed for family happiness. With lush surroundings, modern amenities, and a friendly neighborhood, every day feels like a vacation.",
 };
+
+export const clusterNames = [
+  {
+    id: 0,
+    name: "cluster 1",
+  },
+  {
+    id: 1,
+    name: "cluster 2",
+  },
+  {
+    id: 2,
+    name: "cluster 3",
+  },
+  {
+    id: 3,
+    name: "cluster 4",
+  },
+  {
+    id: 4,
+    name: "cluster 5",
+  },
+];
+
+export const clusterPreview = [
+  {
+    id: 0,
+    name: "cluster 1",
+    description: "lorem ipsum dor sit amet",
+    imageFile: "/dummyThumbnail.jpeg"
+  },
+  {
+    id: 1,
+    name: "cluster 2",
+    description: "lorem ipsum dor sit amet",
+    imageFile: "/dummyThumbnail.jpeg"
+  },
+  {
+    id: 2,
+    name: "cluster 3",
+    description: "lorem ipsum dor sit amet",
+    imageFile: "/dummyThumbnail.jpeg"
+  },
+  {
+    id: 3,
+    name: "cluster 4",
+    description: "lorem ipsum dor sit amet",
+    imageFile: "/dummyThumbnail.jpeg"
+  },
+  {
+    id: 4,
+    name: "cluster 5",
+    description: "lorem ipsum dor sit amet",
+    imageFile: "/dummyThumbnail.jpeg"
+  },
+];
