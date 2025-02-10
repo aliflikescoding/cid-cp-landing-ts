@@ -12,7 +12,10 @@ const Hero: React.FC = async () => {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/hero`,
-      { cache: "no-store" }
+      {
+        cache: "force-cache", // This is the default, so you can also omit this line
+        next: { revalidate: 3600 }, // Revalidate the data every hour (3600 seconds)
+      }
     );
 
     if (!res.ok) {

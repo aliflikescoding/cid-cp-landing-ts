@@ -6,17 +6,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
-interface ListItem {
+interface FacilityItem {
   id: number;
-  name: string;
-}
-
-interface NavListProps {
-  listItems: ListItem[];
   title: string;
 }
 
-const NavList: React.FC<NavListProps> = ({ listItems, title }) => {
+interface NavListProps {
+  listItems: FacilityItem[];
+  title: string;
+}
+
+const NavListFacilities: React.FC<NavListProps> = ({ listItems, title }) => {
   const pathname = usePathname();
   const isActive = pathname.startsWith("/cluster");
 
@@ -42,16 +42,23 @@ const NavList: React.FC<NavListProps> = ({ listItems, title }) => {
             ></span>
           </PopoverButton>
           <PopoverPanel
-            anchor="top"
-            className="flex flex-col font-poppins font-medium bg-background p-2 border-2 rounded-md text-text z-50 mt-2 transition-all duration-300 ease-in-out transform origin-top translate-y-0"
+            anchor="bottom start"
+            transition
+            className="flex origin-top flex-col font-poppins font-medium bg-background p-2 border-2 rounded-md text-text z-50 mt-2 transition duration-300 ease-in-out data-[closed]:scale-95 data-[closed]:opacity-0"
           >
+            <Link
+              className="p-2 hover:bg-accent rounded-md transition duration-300 ease-in-out"
+              href="/facility"
+            >
+              All Facilities
+            </Link>
             {listItems?.map((item) => (
               <Link
-                className="p-2 hover:bg-accent rounded-md transition-all duration-300 ease-in-out"
+                className="p-2 hover:bg-accent rounded-md transition duration-300 ease-in-out"
                 key={item?.id}
-                href={`/cluster/${item.id}`}
+                href={`/facility/${item?.id}`}
               >
-                {item.name}
+                {item?.title}
               </Link>
             ))}
           </PopoverPanel>
@@ -61,4 +68,4 @@ const NavList: React.FC<NavListProps> = ({ listItems, title }) => {
   );
 };
 
-export default NavList;
+export default NavListFacilities;

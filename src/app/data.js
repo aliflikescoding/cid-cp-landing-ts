@@ -75,3 +75,26 @@ export const clusterPreview = [
     imageFile: "/dummyThumbnail.jpeg"
   },
 ];
+
+export const facilityNames = [
+  {
+    id: 0,
+    title: "facility 1",
+  },
+  {
+    id: 1,
+    title: "facility 2",
+  },
+  {
+    id: 2,
+    title: "facility 3",
+  },
+  {
+    id: 3,
+    title: "facility 4",
+  },
+  {
+    id: 4,
+    title: "facility 5",
+  },
+];

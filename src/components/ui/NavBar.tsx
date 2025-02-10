@@ -6,16 +6,22 @@ import Image from "next/image";
 import Link from "next/link";
 import NavLinks from "@/components/ui/NavLinks";
 
-interface ListItem {
+interface clusterItem {
   id: number;
   name: string;
 }
 
-interface NavBarProps {
-  clusterNames: ListItem[];
+interface FacilityItem {
+  id: number;
+  title: string;
 }
 
-const NavBar: React.FC<NavBarProps> = ({ clusterNames }) => {
+interface NavBarProps {
+  clusterNames: clusterItem[];
+  facilityNames: FacilityItem[];
+}
+
+const NavBar: React.FC<NavBarProps> = ({ clusterNames, facilityNames }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -62,7 +68,7 @@ const NavBar: React.FC<NavBarProps> = ({ clusterNames }) => {
             className="w-auto h-full max-w-[135px]"
           />
         </Link>
-        <NavLinks clusterNames={clusterNames} />
+        <NavLinks clusterNames={clusterNames} facilityNames={facilityNames} />
       </CustomContainer>
     </div>
   );

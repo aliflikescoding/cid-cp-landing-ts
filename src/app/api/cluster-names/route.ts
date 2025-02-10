@@ -3,8 +3,8 @@ import { clusterNames } from "@/app/data";
 
 export async function GET(): Promise<NextResponse> {
   try {
-    // Simulate a 1.5-second delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // Simulate a 0.5-second delay
+    await new Promise((resolve) => setTimeout(resolve, 500));
 
     return NextResponse.json({ clusterNames });
   } catch (error) {
