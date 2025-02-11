@@ -18,6 +18,8 @@ export const hero = {
   title: "A city of community",
   description:
     "Find peace and comfort a housing community designed for family happiness. With lush surroundings, modern amenities, and a friendly neighborhood, every day feels like a vacation.",
+  image1: "/hero-left.png",
+  image2: "/hero-right.png",
 };
 
 export const clusterNames = [

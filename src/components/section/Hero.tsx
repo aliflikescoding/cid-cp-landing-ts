@@ -2,10 +2,13 @@ import React from "react";
 import CustomContainer from "../custom/CustomContainer";
 import { Button } from "@headlessui/react";
 import Link from "next/link";
+import HeroImage from "../ui/HeroImage";
 
 type HeroData = {
   title: string;
   description: string;
+  image1: string;
+  image2: string;
 };
 
 const Hero: React.FC = async () => {
@@ -26,9 +29,9 @@ const Hero: React.FC = async () => {
     const { hero }: { hero: HeroData } = await res.json();
 
     return (
-      <div className="font-poppins py-[30vh]">
-        <CustomContainer>
-          <div>
+      <div className="font-poppins pt-[40vh] pb-[30vh]">
+        <CustomContainer className="flex">
+          <div className="mr-12">
             <h1 className="text-5xl font-bold capitalize">{hero.title}</h1>
             <p className="text-xl max-w-[620px] mt-4 mb-8">
               {hero.description}
@@ -44,6 +47,7 @@ const Hero: React.FC = async () => {
               </Button>
             </div>
           </div>
+          <HeroImage image1link={hero.image1} image2link={hero.image2} />
         </CustomContainer>
       </div>
     );
