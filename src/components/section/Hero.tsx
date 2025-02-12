@@ -29,8 +29,8 @@ const Hero: React.FC = async () => {
     const { hero }: { hero: HeroData } = await res.json();
 
     return (
-      <div className="font-poppins pt-[45vh] pb-[30vh]">
-        <CustomContainer className="flex xl:flex-row flex-col">
+      <div className="font-poppins py-[30vh]">
+        <CustomContainer className="flex xl:flex-row flex-col justify-between items-center">
           <div className="xl:mr-12">
             <h1 className="text-5xl font-bold capitalize">{hero.title}</h1>
             <p className="text-xl max-w-[620px] mt-8 mb-16">
