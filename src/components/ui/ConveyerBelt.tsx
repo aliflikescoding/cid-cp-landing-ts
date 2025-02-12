@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -31,8 +31,6 @@ const ConveyerBelt: React.FC<ConveyerBeltProps> = ({ title, logos }) => {
             repeatType: "loop",
             repeatDelay: 0, // Pause for 3 seconds before restarting
           }}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
           className="flex flex-none gap-16 pr-16"
         >
           {repeatedLogos.map((logo, index) => (
