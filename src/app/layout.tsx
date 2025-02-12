@@ -34,7 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head>
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />
       </head>
-      <body className={`${poppins.variable} ${notoSans.variable} antialiased`}>
+      <body className={`${poppins.variable} ${notoSans.variable} antialiased relative`}>
         <Header />
         {children}
         <Footer />
