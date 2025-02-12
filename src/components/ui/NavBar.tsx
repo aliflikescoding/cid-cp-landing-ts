@@ -129,7 +129,7 @@ const NavBar: React.FC<NavBarProps> = ({ clusterNames, facilityNames }) => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: "100%", opacity: 0 }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className={`bg-background fixed bottom-0 z-[150] w-full h-fit shadow-lg p-6 text-lg sm:text-xl rounded-t-3xl drop-shadow-md`}
+            className={`bg-background fixed bottom-0 z-[150] overflow-y-auto h-[65vh] w-full shadow-lg p-6 text-lg sm:text-xl rounded-t-3xl drop-shadow-md`}
           >
             <div className="flex w-full justify-center items-center">
               <div className="w-[25%] h-[10px] rounded-full bg-slate-400 drop-shadow-md"></div>
@@ -139,7 +139,7 @@ const NavBar: React.FC<NavBarProps> = ({ clusterNames, facilityNames }) => {
               {({ open }) => (
                 <>
                   <DisclosureButton
-                    className={`w-full text-left bg-slate-200 overflow-scroll mt-4 py-2 sm:py-4 px-4 font-semibold sm:font-bold active:bg-accent cursor-pointer transition-all ease-in-out duration-300 rounded-xl flex justify-between items-center ${
+                    className={`w-full text-left bg-slate-200 mt-4 py-2 sm:py-4 px-4 font-semibold sm:font-bold active:bg-accent cursor-pointer transition-all ease-in-out duration-300 rounded-xl flex justify-between items-center ${
                       open ? "text-text" : "text-primary"
                     }`}
                   >
@@ -157,11 +157,20 @@ const NavBar: React.FC<NavBarProps> = ({ clusterNames, facilityNames }) => {
                         >
                           <div className="ml-4">
                             <NavMenuLink
-                              text="Location"
-                              route="/location"
+                              text="All Clusters"
+                              route={`/cluster`}
                               onClick={toggleMenu}
                             />
                           </div>
+                          {clusterNames?.map((item) => (
+                            <div key={item.id} className="ml-4">
+                              <NavMenuLink
+                                text={item.name}
+                                route={`/cluster/${item.id}`}
+                                onClick={toggleMenu}
+                              />
+                            </div>
+                          ))}
                         </motion.div>
                       </DisclosurePanel>
                     )}
@@ -174,8 +183,57 @@ const NavBar: React.FC<NavBarProps> = ({ clusterNames, facilityNames }) => {
               route="/location"
               onClick={toggleMenu}
             />
+            <Disclosure as="div" className="w-full">
+              {({ open }) => (
+                <>
+                  <DisclosureButton
+                    className={`w-full text-left bg-slate-200 mt-4 py-2 sm:py-4 px-4 font-semibold sm:font-bold active:bg-accent cursor-pointer transition-all ease-in-out duration-300 rounded-xl flex justify-between items-center ${
+                      open ? "text-text" : "text-primary"
+                    }`}
+                  >
+                    <p>Facilities</p>{" "}
+                    {open ? <FaChevronUp /> : <FaChevronDown />}
+                  </DisclosureButton>
+                  <AnimatePresence>
+                    {open && (
+                      <DisclosurePanel>
+                        <motion.div
+                          initial={{ opacity: 0, y: -24 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -24 }}
+                          transition={{ duration: 0.35, ease: "easeInOut" }}
+                          className="origin-top"
+                        >
+                          <div className="ml-4">
+                            <NavMenuLink
+                              text="All Facilities"
+                              route={`/facility`}
+                              onClick={toggleMenu}
+                            />
+                          </div>
+                          {facilityNames?.map((item) => (
+                            <div key={item.id} className="ml-4">
+                              <NavMenuLink
+                                text={item.title}
+                                route={`/facility/${item.id}`}
+                                onClick={toggleMenu}
+                              />
+                            </div>
+                          ))}
+                        </motion.div>
+                      </DisclosurePanel>
+                    )}
+                  </AnimatePresence>
+                </>
+              )}
+            </Disclosure>
             <NavMenuLink
               text="Promotions & Events"
+              route="/blog"
+              onClick={toggleMenu}
+            />
+            <NavMenuLink
+              text="Virtual Tour"
               route="/blog"
               onClick={toggleMenu}
             />
