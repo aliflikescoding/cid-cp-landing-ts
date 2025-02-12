@@ -132,7 +132,7 @@ const NavBar: React.FC<NavBarProps> = ({ clusterNames, facilityNames }) => {
             className={`bg-background fixed bottom-0 z-[150] overflow-y-auto h-[65vh] w-full shadow-lg p-6 text-lg sm:text-xl rounded-t-3xl drop-shadow-md`}
           >
             <div className="flex w-full justify-center items-center">
-              <div className="w-[25%] h-[10px] rounded-full bg-slate-400 drop-shadow-md"></div>
+              <div className="w-[25%] h-[15px] rounded-full bg-slate-400 drop-shadow-md" onClick={toggleMenu}></div>
             </div>
             <NavMenuLink text="Home" route="/" onClick={toggleMenu} />
             <Disclosure as="div" className="w-full">
