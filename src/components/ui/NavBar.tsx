@@ -1,12 +1,19 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import CustomContainer from "@/components/custom/CustomContainer";
 import Image from "next/image";
 import Link from "next/link";
 import NavLinks from "@/components/ui/NavLinks";
 import NavMenu from "./NavMenu";
+import NavMenuLink from "./NavMenuLink";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 interface clusterItem {
   id: number;
@@ -115,24 +122,71 @@ const NavBar: React.FC<NavBarProps> = ({ clusterNames, facilityNames }) => {
           ></div>
         </div>
       )}
-      {isOpen && (
-        <motion.div
-          initial={{ y: "100%", opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: "100%", opacity: 0 }}
-          transition={{ duration: 0.35, ease: "easeOut" }}
-          className={`bg-background fixed bottom-0 z-[150] w-full h-fit shadow-lg p-6 text-xl rounded-t-3xl drop-shadow-md`}
-        >
-          <div className="flex justify-center items-center">
-            <div className="w-[25%] h-[10px] rounded-full bg-slate-400 drop-shadow-md"></div>
-          </div>
-          <h1>test</h1>
-          <h1>test</h1>
-          <h1>test</h1>
-          <h1>test</h1>
-          <h1>test</h1>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ y: "100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: "100%", opacity: 0 }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className={`bg-background fixed bottom-0 z-[150] w-full h-fit shadow-lg p-6 text-lg sm:text-xl rounded-t-3xl drop-shadow-md`}
+          >
+            <div className="flex w-full justify-center items-center">
+              <div className="w-[25%] h-[10px] rounded-full bg-slate-400 drop-shadow-md"></div>
+            </div>
+            <NavMenuLink text="Home" route="/" onClick={toggleMenu} />
+            <Disclosure as="div" className="w-full">
+              {({ open }) => (
+                <>
+                  <DisclosureButton
+                    className={`w-full text-left bg-slate-200 overflow-scroll mt-4 py-2 sm:py-4 px-4 font-semibold sm:font-bold active:bg-accent cursor-pointer transition-all ease-in-out duration-300 rounded-xl flex justify-between items-center ${
+                      open ? "text-text" : "text-primary"
+                    }`}
+                  >
+                    <p>Clusters</p> {open ? <FaChevronUp /> : <FaChevronDown />}
+                  </DisclosureButton>
+                  <AnimatePresence>
+                    {open && (
+                      <DisclosurePanel>
+                        <motion.div
+                          initial={{ opacity: 0, y: -24 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -24 }}
+                          transition={{ duration: 0.35, ease: "easeInOut" }}
+                          className="origin-top"
+                        >
+                          <div className="ml-4">
+                            <NavMenuLink
+                              text="Location"
+                              route="/location"
+                              onClick={toggleMenu}
+                            />
+                          </div>
+                        </motion.div>
+                      </DisclosurePanel>
+                    )}
+                  </AnimatePresence>
+                </>
+              )}
+            </Disclosure>
+            <NavMenuLink
+              text="Location"
+              route="/location"
+              onClick={toggleMenu}
+            />
+            <NavMenuLink
+              text="Promotions & Events"
+              route="/blog"
+              onClick={toggleMenu}
+            />
+            <NavMenuLink
+              text="Contact"
+              route="/location"
+              onClick={toggleMenu}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
