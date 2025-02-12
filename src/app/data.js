@@ -104,3 +104,110 @@ export const facilityNames = [
 export const clusterCount = clusterNames.length;
 
 export const facilityCount = facilityNames.length;
+
+export const companyLogos = [
+  {
+    id: 0,
+    companyIcon: "/companyIcons/logo1.svg"
+  },
+  {
+    id: 1,
+    companyIcon: "/companyIcons/logo2.svg"
+  },
+  {
+    id: 2,
+    companyIcon: "/companyIcons/logo3.svg"
+  },
+  {
+    id: 3,
+    companyIcon: "/companyIcons/logo4.svg"
+  },
+  {
+    id: 4,
+    companyIcon: "/companyIcons/logo5.svg"
+  },
+  {
+    id: 5,
+    companyIcon: "/companyIcons/logo6.svg"
+  },
+  {
+    id: 6,
+    companyIcon: "/companyIcons/logo7.svg"
+  },
+  {
+    id: 7,
+    companyIcon: "/companyIcons/logo8.svg"
+  },
+  {
+    id: 8,
+    companyIcon: "/companyIcons/logo9.svg"
+  },
+  {
+    id: 9,
+    companyIcon: "/companyIcons/logo10.svg"
+  },
+  {
+    id: 10,
+    companyIcon: "/companyIcons/logo11.svg"
+  },
+  {
+    id: 11,
+    companyIcon: "/companyIcons/logo12.svg"
+  },
+  {
+    id: 12,
+    companyIcon: "/companyIcons/logo13.svg"
+  },
+  {
+    id: 13,
+    companyIcon: "/companyIcons/logo14.svg"
+  },
+  {
+    id: 14,
+    companyIcon: "/companyIcons/logo15.svg"
+  },
+  {
+    id: 15,
+    companyIcon: "/companyIcons/logo16.svg"
+  },
+  {
+    id: 16,
+    companyIcon: "/companyIcons/logo17.svg"
+  },
+  {
+    id: 17,
+    companyIcon: "/companyIcons/logo18.svg"
+  },
+  {
+    id: 18,
+    companyIcon: "/companyIcons/logo19.svg"
+  },
+  {
+    id: 19,
+    companyIcon: "/companyIcons/logo20.svg"
+  },
+  {
+    id: 20,
+    companyIcon: "/companyIcons/logo21.svg"
+  },
+  {
+    id: 21,
+    companyIcon: "/companyIcons/logo22.svg"
+  },
+  {
+    id: 22,
+    companyIcon: "/companyIcons/logo23.svg"
+  },
+  {
+    id: 23,
+    companyIcon: "/companyIcons/logo24.svg"
+  },
+  {
+    id: 24,
+    companyIcon: "/companyIcons/logo25.svg"
+  },
+  {
+    id: 25,
+    companyIcon: "/companyIcons/logo26.svg"
+  },
+];
