@@ -100,3 +100,7 @@ export const facilityNames = [
     title: "facility 5",
   },
 ];
+
+export const clusterCount = clusterNames.length;
+
+export const facilityCount = facilityNames.length;
