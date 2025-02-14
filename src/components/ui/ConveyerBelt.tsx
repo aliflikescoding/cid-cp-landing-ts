@@ -19,7 +19,7 @@ const ConveyerBelt: React.FC<ConveyerBeltProps> = ({ title, logos }) => {
 
   return (
     <div className="relative w-full overflow-hidden py-6">
-      <h2 className="text-center text-gray-600">{title}</h2>
+      <h2 className="text-center text-gray-600 font-base text-xl">{title}</h2>
       <div className="relative w-full flex justify-center mt-4">
         <motion.div
           initial={{ translateX: 0 }}
