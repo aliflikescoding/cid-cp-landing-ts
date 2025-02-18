@@ -216,7 +216,7 @@ export const about = {
   title: "HK Realtindo",
   description:
     "PT HK Realtindo is a subsidiary of PT Hutama Karya (Persero) engaged in the property sector.\nIt was established on May 10, 2010, and has been developing H City Sawangan since 2018.\nthe company has delivered various residential, office, and commercial area projects with modern and innovative concepts.",
-  imageFile: "/video.mp3",
+  imageFile: "/video.mp4",
 };
 
 export const aboutCards = [
