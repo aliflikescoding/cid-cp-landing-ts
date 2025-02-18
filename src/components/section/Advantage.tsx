@@ -78,9 +78,9 @@ const Advantage: React.FC = async () => {
         <div className="absolute top-0 left-0 w-full h-full bg-secondary opacity-85 z-1"></div>
 
         {/* Content */}
-        <CustomContainer className="relative z-10 py-10">
+        <CustomContainer className="relative z-10 py-20">
           <div>
-            <h1 className="text-5xl font-semibold text-background">
+            <h1 className="text-5xl font-semibold text-background mb-9">
               Why here?
             </h1>
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
