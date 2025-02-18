@@ -222,6 +222,38 @@ export const about = {
 export const aboutCards = [
   {
     id: 0,
+    title: "Years of experience.",
+    description:
+      "Realestate has 14 years of expertise in property management, shaping Indonesia's property sector.",
+    iconFile: "/aboutIcon/clock.svg",
+  },
+  {
+    id: 1,
+    title: "Property Management.",
+    description:
+      "Possesses strong experience and achievements in both high-rise and landed properties.",
+    iconFile: "/aboutIcon/house.svg",
+  },
+  {
+    id: 2,
+    title: "Mutiple Sub Companies.",
+    description:
+      "Managing multiple sub-companies with expertise, fostering growth and innovation across diverse industries.",
+    iconFile: "/aboutIcon/building.svg",
+  },
+];
+
+export const advantage = {
+  advantage: "Not just a place, but a home worth living",
+  explanation:
+    "Built on a 17-hectare land with wide road access and complete facilities in a strategic location, it is our duty to ensure your comfort and satisfaction.",
+  image: "/advantage.jpg",
+  backgroundImage: "/advantageBackground.png",
+};
+
+export const advantageCards = [
+  {
+    id: 0,
     advantage: "Years of experience.",
     explanation:
       "Realestate has 14 years of expertise in property management, shaping Indonesia's property sector.",
@@ -229,16 +261,16 @@ export const aboutCards = [
   },
   {
     id: 1,
-    advantage: "Property Management.",
+    advantage: "Move-In Ready Homes.",
     explanation:
-      "Possesses strong experience and achievements in both high-rise and landed properties.",
+      "Discover the comfort of living in your dream home without the wait. Our move-in-ready homes feature modern designs, complete facilities, and strategic locations.",
     iconFile: "/aboutIcon/house.svg",
   },
   {
     id: 2,
-    advantage: "Mutiple Sub Companies.",
+    advantage: "Expansive Land Area.",
     explanation:
-      "Managing multiple sub-companies with expertise, fostering growth and innovation across diverse industries.",
+      "Offering homes with ample space for family activities, gardening, or even building additional facilities. Our homes feature large land areas, giving you the freedom to design a living space that suits your dreams and needs..",
     iconFile: "/aboutIcon/building.svg",
   },
 ];

@@ -6,12 +6,12 @@ type AboutData = {
   title: string;
   description: string;
   imageFile: string;
-} 
+};
 
 type AboutCardItem = {
   id: number;
-  advantage: string;
-  explanation: string;
+  title: string;
+  description: string;
   iconFile: string;
 };
 
@@ -41,7 +41,7 @@ const About: React.FC = async () => {
     const aboutcards: AboutCardItem[] = response2.aboutCards;
 
     return (
-      <div className="relative overflow-hidden rounded-t-2xl">
+      <div className="relative overflow-hidden rounded-2xl">
         {/* Video Background */}
         <video
           autoPlay
@@ -62,16 +62,16 @@ const About: React.FC = async () => {
           <p className="mt-4 text-lg font-normal text-background max-w-[600px]">
             {about.description}
           </p>
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {aboutcards.map((card) => (
               <IconCard
-              key={card.id}
-              title={card.advantage}
-              paragraph={card.explanation}
-              iconLink={card.iconFile}
+                key={card.id}
+                title={card.title}
+                paragraph={card.description}
+                iconLink={card.iconFile}
               />
             ))}
-            </div>
+          </div>
         </CustomContainer>
       </div>
     );
