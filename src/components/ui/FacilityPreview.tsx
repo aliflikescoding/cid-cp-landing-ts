@@ -21,43 +21,41 @@ const FacilityPreview: React.FC<FacilityPreviewProps> = ({ facilities }) => {
   );
 
   return (
-    <div className="py-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-        <div>
-          <h1 className="text-4xl font-bold mb-5">Facilities of Realestate</h1>
-          <div className="flex gap-3 mb-4">
-            {facilities.map((facility) => (
-              <button
-                key={facility.id}
-                className={`px-4 py-2 text-normal hover:bg-primary hover:text-white transition-all duration-300 ease-in-out font-semibold rounded-2xl ${
-                  selectedFacility.id === facility.id
-                    ? "bg-primary text-white"
-                    : "bg-secondary text-slate-200"
-                }`}
-                onClick={() => setSelectedFacility(facility)}
-              >
-                {facility.title}
-              </button>
-            ))}
-          </div>
-          <p className="text-lg font-normal mt-6 mb-9">
-            {selectedFacility.description}
-          </p>
-          <ArrowLink
-            title="read more"
-            link={`/facility/${selectedFacility.id}`}
-          />
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+      <div>
+        <h1 className="text-4xl font-bold mb-5">Facilities of Realestate</h1>
+        <div className="flex flex-wrap gap-3 mb-4">
+          {facilities.map((facility) => (
+            <button
+              key={facility.id}
+              className={`px-4 py-2 text-sm sm:text-normal hover:bg-primary hover:text-white transition-all duration-300 ease-in-out font-semibold rounded-2xl ${
+                selectedFacility.id === facility.id
+                  ? "bg-primary text-white"
+                  : "bg-secondary text-slate-200"
+              }`}
+              onClick={() => setSelectedFacility(facility)}
+            >
+              {facility.title}
+            </button>
+          ))}
         </div>
-        <div>
-          <Image
-            src={selectedFacility.locationImageFile}
-            alt={`image of ${selectedFacility.title}`}
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-full h-[400px] object-cover rounded-lg shadow-md"
-          />
-        </div>
+        <p className="text-lg font-normal mt-6 mb-9">
+          {selectedFacility.description}
+        </p>
+        <ArrowLink
+          title="read more"
+          link={`/facility/${selectedFacility.id}`}
+        />
+      </div>
+      <div>
+        <Image
+          src={selectedFacility.locationImageFile}
+          alt={`image of ${selectedFacility.title}`}
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="w-full h-80 sm:h-[400px] object-cover rounded-lg shadow-md"
+        />
       </div>
     </div>
   );
