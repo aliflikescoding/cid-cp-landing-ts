@@ -29,7 +29,7 @@ const FacilityPreview: React.FC<FacilityPreviewProps> = ({ facilities }) => {
             {facilities.map((facility) => (
               <button
                 key={facility.id}
-                className={`px-4 py-2 text-normal font-semibold rounded-2xl ${
+                className={`px-4 py-2 text-normal hover:bg-primary hover:text-white transition-all duration-300 ease-in-out font-semibold rounded-2xl ${
                   selectedFacility.id === facility.id
                     ? "bg-primary text-white"
                     : "bg-secondary text-slate-200"
@@ -40,8 +40,13 @@ const FacilityPreview: React.FC<FacilityPreviewProps> = ({ facilities }) => {
               </button>
             ))}
           </div>
-          <p className="text-lg font-normal mt-6 mb-9">{selectedFacility.description}</p>
-          <ArrowLink title="read more" link={`/facility/${selectedFacility.id}`} />
+          <p className="text-lg font-normal mt-6 mb-9">
+            {selectedFacility.description}
+          </p>
+          <ArrowLink
+            title="read more"
+            link={`/facility/${selectedFacility.id}`}
+          />
         </div>
         <div>
           <Image
