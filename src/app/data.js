@@ -307,6 +307,8 @@ export const homeLocationTime = [
 
 export const totalClusters = clusterNames.length;
 
+export const totalHouseTypes = 15;
+
 export const clusterPreview = [
   {
     id: 0,
