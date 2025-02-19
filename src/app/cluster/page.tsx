@@ -3,7 +3,6 @@ import CustomContainer from "@/components/custom/CustomContainer";
 import Clusters from "@/components/section/Clusters";
 import Image from "next/image";
 import TotalCard from "@/components/ui/TotalCard";
-import { totalHouseTypes } from "../data";
 
 const AllClusters: React.FC = async () => {
   const [res1, res2] = await Promise.all([
