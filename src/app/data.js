@@ -348,3 +348,46 @@ export const clusterPreview = [
     imageFile: "/clusters/cover/gaharu.png",
   },
 ];
+
+export const articleCategories = [
+  {
+    id: 0,
+    name: "promos",
+  },
+  {
+    id: 1,
+    name: "news",
+  },
+  {
+    id: 2,
+    name: "blog",
+  },
+  {
+    id: 3,
+    name: "announcements",
+  },
+];
+
+export const articlePreview = [
+  {
+    id: 0,
+    title: "Aenean egestas libero amet vulputate.",
+    summary:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi morbi sit consectetur elit.",
+    imageFile: "/bg-facility.jpg",
+  },
+  {
+    id: 1,
+    title: "Aenean egestas libero amet vulputate.",
+    summary:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi morbi sit consectetur elit.",
+    imageFile: "/bg-facility.jpg",
+  },
+  {
+    id: 2,
+    title: "Aenean egestas libero amet vulputate.",
+    summary:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi morbi sit consectetur elit.",
+    imageFile: "/bg-facility.jpg",
+  },
+];
