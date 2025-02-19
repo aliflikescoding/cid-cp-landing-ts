@@ -90,10 +90,10 @@ const Location: React.FC = async () => {
               height={0}
               width={0}
               sizes="100vw"
-              className="w-full h-[543px]"
+              className="w-full h-auto lg:h-[543px]"
             />
           </Link>
-          <div className="flex flex-wrap gap-4 mt-9">
+          <div className="flex flex-nowrap overflow-x-auto w-full gap-4 mt-9">
             {time.map((item) => (
               <TimeCard
                 key={item.id}
