@@ -305,3 +305,35 @@ export const facilitiesPreview = [
     locationImageFile: "/facility/jogging.png",
   },
 ];
+
+export const location = {
+  locationName: "Location of H City Sawangan",
+  slogan: "Strategic Location, Easier Mobility",
+  description:
+    "We believe that a good home will create a harmonious environment.",
+  imageFile: "/location.png",
+  locationLink: "google.com",
+};
+
+export const homeLocationTime = [
+  {
+    id: 0,
+    durationMinutes: "5",
+    name: "Gas Station",
+  },
+  {
+    id: 1,
+    durationMinutes: "20",
+    name: "Sawangan Toll",
+  },
+  {
+    id: 2,
+    durationMinutes: "10",
+    name: "Pacific Place Mall",
+  },
+  {
+    id: 3,
+    durationMinutes: "35",
+    name: "Jakarta Central Park",
+  },
+];

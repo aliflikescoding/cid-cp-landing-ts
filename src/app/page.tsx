@@ -3,6 +3,7 @@ import Hero from "@/components/section/Hero";
 import About from "@/components/section/About";
 import Advantage from "@/components/section/Advantage";
 import HomeFacility from "@/components/section/HomeFacility";
+import Location from "@/components/section/Location";
 
 const Page: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const Page: React.FC = () => {
       <About />
       <Advantage />
       <HomeFacility />
+      <Location />
     </div>
   );
 };
