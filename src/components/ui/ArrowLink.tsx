@@ -5,11 +5,12 @@ import Link from "next/link";
 interface ArrowLinkProps {
   link: string;
   title: string;
+  className?: string;
 }
 
-const ArrowLink: React.FC<ArrowLinkProps> = ({ link, title }) => {
+const ArrowLink: React.FC<ArrowLinkProps> = ({ link, title, className }) => {
   return (
-    <Link className="group relative inline-block text-lg" href={link}>
+    <Link className={`group relative inline-block ${className}`} href={link}>
       <div className="text-primary mt-auto flex items-center capitalize transition-all ease-in-out">
         {title}
         <FaArrowRightLong className="ml-2 transition-all group-hover:ml-3" />

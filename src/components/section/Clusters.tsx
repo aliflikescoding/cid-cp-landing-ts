@@ -1,6 +1,7 @@
 import React from "react";
 import CustomContainer from "../custom/CustomContainer";
 import ProductCard from "../ui/ProductCard";
+import ArrowLink from "../ui/ArrowLink";
 
 interface ClustersProp {
   expanded: boolean;
@@ -32,11 +33,15 @@ const Clusters: React.FC<ClustersProp> = async ({ expanded }) => {
   const displayClusters = expanded ? clusters : clusters.slice(0, 3);
 
   return (
-    <div className="py-20">
+    <div className={`${expanded ? "py-12" : "py-20"}`}>
       <CustomContainer>
-        <div className="mb-10">
-          <h1 className="capitalize text-5xl font-bold">
-            {expanded ? "Our clusters" : "Featured Clusters"}
+        <div className={`${expanded ? "mb-5" : "mb-10"}`}>
+          <h1
+            className={`capitalize font-bold ${
+              expanded ? "text-4xl" : "text-5xl"
+            }`}
+          >
+            {expanded ? "All of our clusters" : "Featured Clusters"}
           </h1>
           {!expanded && (
             <h4 className="text-xl font-normal mt-2">
@@ -55,6 +60,13 @@ const Clusters: React.FC<ClustersProp> = async ({ expanded }) => {
             />
           ))}
         </div>
+        {!expanded && (
+          <ArrowLink
+            className="text-xl mt-10"
+            link="/cluster"
+            title="see all clusters"
+          />
+        )}
       </CustomContainer>
     </div>
   );

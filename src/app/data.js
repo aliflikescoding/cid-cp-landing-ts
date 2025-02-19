@@ -305,6 +305,8 @@ export const homeLocationTime = [
   },
 ];
 
+export const totalClusters = clusterNames.length;
+
 export const clusterPreview = [
   {
     id: 0,
