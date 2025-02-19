@@ -6,6 +6,7 @@ import HomeFacility from "@/components/section/HomeFacility";
 import Location from "@/components/section/Location";
 import Clusters from "@/components/section/Clusters";
 import Redeem from "@/components/section/Redeem";
+import Facility from "@/components/section/Facility";
 
 const Page: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Page: React.FC = () => {
       <Location />
       <Clusters expanded={false} />
       <Redeem />
+      <Facility expanded={false}/>
     </div>
   );
 };

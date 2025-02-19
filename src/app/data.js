@@ -309,6 +309,8 @@ export const totalClusters = clusterNames.length;
 
 export const totalHouseTypes = 15;
 
+export const totalFacility = facilitiesPreview.length;
+
 export const clusterPreview = [
   {
     id: 0,
