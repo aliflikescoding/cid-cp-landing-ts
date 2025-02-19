@@ -28,18 +28,18 @@ const AllClusters: React.FC = async () => {
   return (
     <>
       <div className="pt-12">
-        <CustomContainer className="flex items-center">
-          <div className="max-w-[50%] relative overflow-hidden">
+        <CustomContainer className="flex md:flex-row flex-col-reverse items-center">
+          <div className="md:max-w-[50%] relative overflow-hidden">
             <Image
               src={`/bg-cluster.png`}
               alt="Background Image"
               height={543}
               width={800}
-              className="w-full h-[543px] object-cover rounded-2xl"
+              className="w-full h-[343px] md:h-[543px] object-cover rounded-2xl"
               priority
             />
           </div>
-          <div className="ml-10">
+          <div className="md:ml-10 mb-6 md:mb-0">
             <h1 className="text-5xl font-bold">Our Clusters</h1>
             <div className="mt-5 grid grid-cols-2 gap-2">
               <TotalCard title="Clusters" total={`${totalCluster}`} />

@@ -49,7 +49,7 @@ const Clusters: React.FC<ClustersProp> = async ({ expanded }) => {
             </h4>
           )}
         </div>
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {displayClusters.map((cluster) => (
             <ProductCard
               key={cluster?.id}

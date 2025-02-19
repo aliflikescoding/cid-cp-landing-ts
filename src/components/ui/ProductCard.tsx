@@ -19,7 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, description, link, ima
   return (
     <Link
       href={link}
-      className="relative overflow-hidden w-full group h-[550px] transition-all duration-300 ease-in-out cursor-pointer rounded-2xl"
+      className="relative overflow-hidden w-full group h-[350px] lg:h-[550px] transition-all duration-300 ease-in-out cursor-pointer rounded-2xl"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
