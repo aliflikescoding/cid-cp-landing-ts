@@ -14,7 +14,7 @@ const ArrowLink: React.FC<ArrowLinkProps> = ({ link, title }) => {
         {title}
         <FaArrowRightLong className="ml-2 transition-all group-hover:ml-3" />
       </div>
-      <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+      <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-primary ease-in-out transition-all duration-300 group-hover:w-full"></span>
     </Link>
   );
 };
