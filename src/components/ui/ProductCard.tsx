@@ -10,9 +10,10 @@ interface ProductCardProps {
   title: string;
   description: string;
   link: string;
+  imageLink: string;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ title, description, link }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ title, description, link, imageLink }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -25,7 +26,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, description, link }) =
       {/* Image Background */}
       <div className="absolute top-0 left-0 w-full h-full z-0">
         <Image
-          src="/locationBackground.png"
+          src={`${imageLink}`}
           alt="Background Image"
           layout="fill"
           objectFit="cover"

@@ -6,7 +6,31 @@ interface ClustersProp {
   expanded: boolean;
 }
 
-const Clusters: React.FC<ClustersProp> = ({ expanded }) => {
+interface ClusterItem {
+  id: number;
+  name: string;
+  description: string;
+  imageFile: string;
+}
+
+const Clusters: React.FC<ClustersProp> = async ({ expanded }) => {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/cluster-preview`,
+    {
+      cache: "force-cache",
+      next: { revalidate: 60 },
+    }
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data = await res.json();
+
+  const clusters: ClusterItem[] = data.clusterPreview;
+  const displayClusters = expanded ? clusters : clusters.slice(0, 3);
+
   return (
     <div className="py-20">
       <CustomContainer>
@@ -20,8 +44,16 @@ const Clusters: React.FC<ClustersProp> = ({ expanded }) => {
             </h4>
           )}
         </div>
-        <div className="grid grid-cols-3">
-          
+        <div className="grid grid-cols-3 gap-6">
+          {displayClusters.map((cluster) => (
+            <ProductCard
+              key={cluster?.id}
+              title={cluster?.name}
+              description={cluster?.description}
+              imageLink={cluster.imageFile}
+              link={`/cluster/${cluster?.id}`}
+            />
+          ))}
         </div>
       </CustomContainer>
     </div>

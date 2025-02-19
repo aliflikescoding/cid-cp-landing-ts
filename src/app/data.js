@@ -45,39 +45,6 @@ export const clusterNames = [
   },
 ];
 
-export const clusterPreview = [
-  {
-    id: 0,
-    name: "cluster 1",
-    description: "lorem ipsum dor sit amet",
-    imageFile: "/dummyThumbnail.jpeg"
-  },
-  {
-    id: 1,
-    name: "cluster 2",
-    description: "lorem ipsum dor sit amet",
-    imageFile: "/dummyThumbnail.jpeg"
-  },
-  {
-    id: 2,
-    name: "cluster 3",
-    description: "lorem ipsum dor sit amet",
-    imageFile: "/dummyThumbnail.jpeg"
-  },
-  {
-    id: 3,
-    name: "cluster 4",
-    description: "lorem ipsum dor sit amet",
-    imageFile: "/dummyThumbnail.jpeg"
-  },
-  {
-    id: 4,
-    name: "cluster 5",
-    description: "lorem ipsum dor sit amet",
-    imageFile: "/dummyThumbnail.jpeg"
-  },
-];
-
 export const facilityNames = [
   {
     id: 0,
@@ -335,5 +302,43 @@ export const homeLocationTime = [
     id: 3,
     durationMinutes: "35",
     name: "Jakarta Central Park",
+  },
+];
+
+export const clusterPreview = [
+  {
+    id: 0,
+    name: "Akasia",
+    description:
+      "Cluster Akasia H City Sawangan is a modern residence designed to provide comfort and functionality in every corner. With a building area of 45 m² and a land area of 81 m², this type offers ample space for a small family or young couple.",
+    imageFile: "/clusters/cover/akasia.png",
+  },
+  {
+    id: 1,
+    name: "Borneo",
+    description:
+      "Cluster Borneo H City Sawangan is a modern residence designed to provide comfort and functionality in every corner. With a building area of 45 m² and a land area of 81 m², this type offers ample space for a small family or young couple.",
+    imageFile: "/clusters/cover/borneo.png",
+  },
+  {
+    id: 2,
+    name: "Cemara",
+    description:
+      "A healthy and comfortable environment is not just about the living space, but also about how you feel within it. Surrounded by fresh air, green open spaces, and an atmosphere that supports a balanced lifestyle, every day will feel more meaningful.",
+    imageFile: "/clusters/cover/cemara.png",
+  },
+  {
+    id: 3,
+    name: "Damar",
+    description:
+      "A healthy and comfortable environment is not just about the place you live, but also about how you feel within it. Surrounded by fresh air, green open spaces, and an atmosphere that supports life balance, every day will feel more meaningful.",
+    imageFile: "/clusters/cover/damar.png",
+  },
+  {
+    id: 4,
+    name: "Gaharu",
+    description:
+      "A healthy and comfortable environment is not just about the place you live, but also about how you feel within it. Surrounded by fresh air, green open spaces, and an atmosphere that supports life balance, every day will feel more meaningful.",
+    imageFile: "/clusters/cover/gaharu.png",
   },
 ];
