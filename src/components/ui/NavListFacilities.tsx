@@ -18,7 +18,7 @@ interface NavListProps {
 
 const NavListFacilities: React.FC<NavListProps> = ({ listItems, title }) => {
   const pathname = usePathname();
-  const isActive = pathname.startsWith("/cluster");
+  const isActive = pathname.startsWith("/facility");
 
   return (
     <Popover className="relative">
