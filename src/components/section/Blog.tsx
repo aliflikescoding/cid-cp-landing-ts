@@ -63,7 +63,7 @@ const Blog: React.FC<BlogProp> = async ({ expanded }) => {
           <ArrowLink
             className="text-xl mt-10"
             link="/blog"
-            title="see all blogs"
+            title="see all articles"
             color="background"
             bg="background"
           />
