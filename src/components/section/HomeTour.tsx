@@ -37,7 +37,14 @@ const HomeTour: React.FC = async () => {
           <h3 className="text-2xl font-semibold opacity-90">{virtual.name}</h3>
         </div>
         <div className="w-full mt-14">
-          <Image src={virtual.mediaFile} alt={virtual.caption} height={0} width={0} sizes="100vw" className="w-full h-[543px] rounded-2xl"/>
+          <Image
+            src={virtual.mediaFile}
+            alt={virtual.caption}
+            height={0}
+            width={0}
+            sizes="100vw"
+            className="w-full h-auto lg:h-[543px] rounded-2xl"
+          />
         </div>
       </CustomContainer>
     </div>
