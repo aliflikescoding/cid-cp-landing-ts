@@ -7,30 +7,45 @@ interface BlogProp {
   expanded: boolean;
 }
 
-interface ClusterItem {
+interface ArticleItem {
   id: number;
   title: string;
   summary: string;
   imageFile: string;
+  categoryId: string;
+}
+
+interface ArticleCategoryItem {
+  id: number;
+  name: string;
 }
 
 const Blog: React.FC<BlogProp> = async ({ expanded }) => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/article-preview`,
-    {
+  const [res1, res2] = await Promise.all([
+    fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/article-preview`, {
       cache: "force-cache",
       next: { revalidate: 60 },
-    }
-  );
+    }),
+    fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/article-category`, {
+      cache: "force-cache",
+      next: { revalidate: 60 },
+    }),
+  ]);
 
-  if (!res.ok) {
+  if (!res1.ok || !res2.ok) {
     throw new Error("Failed to fetch data");
   }
 
-  const data = await res.json();
+  const [response1, response2] = await Promise.all([res1.json(), res2.json()]);
 
-  const articles: ClusterItem[] = data.articlePreview;
+  const articles: ArticleItem[] = response1.articlePreview;
   const displayArticles = expanded ? articles : articles.slice(0, 3);
+  const articleCategories: ArticleCategoryItem[] = response2.articleCategories;
+
+  function getCategoryNameById(id: number) {
+    const category = articleCategories.find((cat) => cat.id === id);
+    return category ? category.name : null;
+  }
 
   return (
     <div
@@ -40,11 +55,7 @@ const Blog: React.FC<BlogProp> = async ({ expanded }) => {
     >
       <CustomContainer>
         <div className="mb-10">
-          <h1
-            className={`capitalize font-bold ${
-              expanded ? "text-4xl" : "text-5xl"
-            }`}
-          >
+          <h1 className={`capitalize font-bold text-5xl`}>
             {expanded ? "Our promos and news" : "Our Latest Promos and News"}
           </h1>
         </div>
@@ -56,6 +67,9 @@ const Blog: React.FC<BlogProp> = async ({ expanded }) => {
               desc={cluster?.summary}
               imageLink={cluster.imageFile}
               link={`/blog/${cluster?.id}`}
+              categoryName={`${getCategoryNameById(
+                parseInt(cluster?.categoryId)
+              )}`}
             />
           ))}
         </div>

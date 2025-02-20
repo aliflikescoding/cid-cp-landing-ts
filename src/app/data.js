@@ -375,6 +375,7 @@ export const articlePreview = [
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi morbi sit consectetur elit.",
     imageFile: "/bg-facility.jpg",
+    categoryId: 0,
   },
   {
     id: 1,
@@ -382,6 +383,7 @@ export const articlePreview = [
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi morbi sit consectetur elit.",
     imageFile: "/bg-facility.jpg",
+    categoryId: 0,
   },
   {
     id: 2,
@@ -389,5 +391,6 @@ export const articlePreview = [
     summary:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi morbi sit consectetur elit.",
     imageFile: "/bg-facility.jpg",
+    categoryId: 0,
   },
 ];
