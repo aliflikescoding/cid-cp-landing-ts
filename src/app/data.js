@@ -394,3 +394,10 @@ export const articlePreview = [
     categoryId: 0,
   },
 ];
+
+export const homeVirtualTour = {
+  slogan: "Explore H City Sawangan",
+  name: "H City Enivronment",
+  caption: "A place where you can feel the comfort of home",
+  mediaFile: "/advantageBackground.png",
+};
