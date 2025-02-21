@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -59,19 +59,25 @@ const FacilitySelect: React.FC<FacilitySelectProps> = ({
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }} // Added ease-in-out
+              transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               <h1 className="text-4xl font-bold mb-4">{title} Gallery</h1>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-4">
-                {facilityGallery.map((image, index) => (
-                  <GalleryCard
-                    key={image.id}
-                    index={index}
-                    src={image.locationImageFile}
-                    title={image.caption}
-                  />
-                ))}
-              </div>
+              {facilityGallery.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-4">
+                  {facilityGallery.map((image, index) => (
+                    <GalleryCard
+                      key={image.id}
+                      index={index}
+                      src={image.locationImageFile}
+                      title={image.caption}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-8 text-gray-500">
+                  No images available in the gallery
+                </div>
+              )}
             </motion.div>
           ) : (
             <motion.div
@@ -79,7 +85,7 @@ const FacilitySelect: React.FC<FacilitySelectProps> = ({
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }} // Added ease-in-out
+              transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               <h1 className="text-4xl font-bold mb-4">{title} Location</h1>
               <Image
