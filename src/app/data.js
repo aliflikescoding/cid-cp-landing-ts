@@ -444,3 +444,42 @@ export const facilities = [
       "Discover new energy with every step on our running track. Designed for comfort and motivation, this track is the perfect place to refresh both your body and mind. Whether you're running for fitness, relaxation, or simply to enjoy some free time, each lap brings you closer to a more productive and energetic day. Start your run today and feel the difference!",
   },
 ];
+
+export const facilityGaleries = [
+  {
+    id: 0,
+    caption: "Side View",
+    locationImageFile: "/facility/jogging.png",
+    facilityId: 3,
+  },
+  {
+    id: 1,
+    caption: "Front View",
+    locationImageFile: "/facility/jogging.png",
+    facilityId: 3,
+  },
+  {
+    id: 2,
+    caption: "Side View",
+    locationImageFile: "/facility/playground.png",
+    facilityId: 2,
+  },
+  {
+    id: 3,
+    caption: "Front View",
+    locationImageFile: "/facility/playground.png",
+    facilityId: 2,
+  },
+  {
+    id: 4,
+    caption: "Side View",
+    locationImageFile: "/facility/park.png",
+    facilityId: 1,
+  },
+  {
+    id: 5,
+    caption: "Front View",
+    locationImageFile: "/facility/park.png",
+    facilityId: 1,
+  },
+];
