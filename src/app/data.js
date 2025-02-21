@@ -611,3 +611,56 @@ export const timeDistance = [
     places: [],
   },
 ];
+
+export const cluster = [
+  {
+    id: 0,
+    name: "Akasia",
+    description:
+      "Cluster Akasia H City Sawangan is a modern residence designed to provide comfort and functionality in every corner. With a building area of 45 m² and a land area of 81 m², this type offers ample space for a small family or young couple.",
+    imageFile: "/clusters/cover/akasia.png",
+    siteplanDescription:
+      "Dirancang untuk memaksimalkan ruang, menjaga keseimbangan antara area pribadi dan ruang terbuka, serta menciptakan lingkungan yang menyatu dengan alam sekitar.",
+    siteplanImage: "/siteplan/akasia.png",
+  },
+  {
+    id: 1,
+    name: "Borneo",
+    description:
+      "Cluster Borneo H City Sawangan is a modern residence designed to provide comfort and functionality in every corner. With a building area of 45 m² and a land area of 81 m², this type offers ample space for a small family or young couple.",
+    imageFile: "/clusters/cover/borneo.png",
+    siteplanDescription:
+      "Cluster Borneo H City Sawangan adalah hunian modern yang dirancang untuk memberikan kenyamanan dan fungsionalitas dalam setiap sudutnya. Dengan luas bangunan 45 m² dan luas tanah 81 m², tipe ini menawarkan ruang yang cukup untuk keluarga kecil atau pasangan muda.",
+    siteplanImage: "/siteplan/borneo.jpeg",
+  },
+  {
+    id: 2,
+    name: "Cemara",
+    description:
+      "A healthy and comfortable environment is not just about the living space, but also about how you feel within it. Surrounded by fresh air, green open spaces, and an atmosphere that supports a balanced lifestyle, every day will feel more meaningful.",
+    imageFile: "/clusters/cover/cemara.png",
+    siteplanDescription:
+      "Dirancang untuk memaksimalkan ruang, menjaga keseimbangan antara area pribadi dan ruang terbuka, serta menciptakan lingkungan yang menyatu dengan alam sekitar.",
+    siteplanImage: "/siteplan/cemara.jpeg",
+  },
+  {
+    id: 3,
+    name: "Damar",
+    description:
+      "A healthy and comfortable environment is not just about the place you live, but also about how you feel within it. Surrounded by fresh air, green open spaces, and an atmosphere that supports life balance, every day will feel more meaningful.",
+    imageFile: "/clusters/cover/damar.png",
+    siteplanDescription:
+      "Lingkungan yang sehat dan nyaman bukan hanya soal tempat tinggal, tapi juga tentang bagaimana Anda merasa di dalamnya. Dikelilingi oleh udara segar, ruang terbuka hijau, dan atmosfer yang mendukung keseimbangan hidup, setiap hari akan terasa lebih bermakna.",
+    siteplanImage: "/siteplan/damar.jpeg",
+  },
+  {
+    id: 4,
+    name: "Gaharu",
+    description:
+      "A healthy and comfortable environment is not just about the place you live, but also about how you feel within it. Surrounded by fresh air, green open spaces, and an atmosphere that supports life balance, every day will feel more meaningful.",
+    imageFile: "/clusters/cover/gaharu.png",
+    siteplanDescription:
+      "Dirancang untuk memaksimalkan ruang, menjaga keseimbangan antara area pribadi dan ruang terbuka, serta menciptakan lingkungan yang menyatu dengan alam sekitar.",
+    siteplanImage: "/siteplan/gaharu.jpeg",
+  },
+];
