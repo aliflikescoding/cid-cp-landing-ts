@@ -6,39 +6,26 @@ import CustomContainer from "../custom/CustomContainer";
 import Image from "next/image";
 import GalleryCard from "./GalleryCard";
 
-interface FacilitySelectProps {
-  title: string;
+interface FacilityGalleryItem {
+  id: number;
+  caption: string;
+  locationImageFile: string;
 }
 
-const FacilitySelect: React.FC<FacilitySelectProps> = ({ title }) => {
+interface FacilitySelectProps {
+  title: string;
+  facilityGallery: FacilityGalleryItem[];
+}
+
+const FacilitySelect: React.FC<FacilitySelectProps> = ({
+  title,
+  facilityGallery,
+}) => {
   const [isSelected, setIsSelected] = useState(true);
 
   const toggleSelection = () => {
     setIsSelected(!isSelected);
   };
-
-  const images = [
-    {
-      id: 1,
-      title: "Main Bedroom",
-      src: "/bg-facility.jpg",
-    },
-    {
-      id: 2,
-      title: "Children Bedroom",
-      src: "/bg-facility.jpg",
-    },
-    {
-      id: 3,
-      title: "Family Room",
-      src: "/bg-facility.jpg",
-    },
-    {
-      id: 4,
-      title: "Dining Room",
-      src: "/bg-facility.jpg",
-    },
-  ];
 
   return (
     <div className="py-10">
@@ -76,12 +63,12 @@ const FacilitySelect: React.FC<FacilitySelectProps> = ({ title }) => {
             >
               <h1 className="text-4xl font-bold mb-4">{title} Gallery</h1>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-4">
-                {images.map((image, index) => (
+                {facilityGallery.map((image, index) => (
                   <GalleryCard
                     key={image.id}
                     index={index}
-                    src={image.src}
-                    title={image.title}
+                    src={image.locationImageFile}
+                    title={image.caption}
                   />
                 ))}
               </div>

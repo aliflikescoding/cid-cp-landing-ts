@@ -18,21 +18,38 @@ interface Facility {
   slogan: string;
 }
 
-const FacilityPageRoute = async ({ params }: Props) => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/facility/${params.slug}`,
-    {
-      cache: "force-cache",
-      next: { revalidate: 60 },
-    }
-  );
+interface FacilityGalleryItem {
+  id: number;
+  caption: string;
+  locationImageFile: string;
+}
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch facility");
+const FacilityPageRoute = async ({ params }: Props) => {
+  const [res1, res2] = await Promise.all([
+    fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/facility/${params.slug}`,
+      {
+        cache: "force-cache",
+        next: { revalidate: 60 },
+      }
+    ),
+    fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/facility-galleries/${params.slug}`,
+      {
+        cache: "force-cache",
+        next: { revalidate: 60 },
+      }
+    ),
+  ]);
+
+  if (!res1.ok || !res2.ok) {
+    throw new Error("Failed to fetch data");
   }
 
-  const data = await res.json();
-  const facility: Facility = data.facility;
+  const [response1, response2] = await Promise.all([res1.json(), res2.json()]);
+
+  const facility: Facility = response1.facility;
+  const facilityGallery: FacilityGalleryItem[] = response2.facilityGaleries;
 
   return (
     <>
@@ -53,7 +70,7 @@ const FacilityPageRoute = async ({ params }: Props) => {
               <div className="absolute inset-0 bg-black opacity-45"></div>
               {/* Content */}
 
-              <div className="absolute z-50 bg-background max-w-[566px] bottom-9 right-9 p-4 text-right rounded-2xl">
+              <div className="absolute z-20 bg-background max-w-[566px] bottom-9 right-9 p-4 text-right rounded-2xl">
                 <h1 className="text-3xl font-bold mb-4">{facility.title}</h1>
                 <p className="text-sm">{facility.description}</p>
               </div>
@@ -65,7 +82,10 @@ const FacilityPageRoute = async ({ params }: Props) => {
           </div>
         </CustomContainer>
       </div>
-      <FacilitySelect title={`${facility.title}`} />
+      <FacilitySelect
+        title={`${facility.title}`}
+        facilityGallery={facilityGallery}
+      />
     </>
   );
 };
