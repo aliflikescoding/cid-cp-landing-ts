@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import CustomContainer from "@/components/custom/CustomContainer";
+import { motion, AnimatePresence } from "framer-motion";
+import GalleryCard from "@/components/ui/GalleryCard";
 
 interface StrategicPlace {
   id: number;
@@ -46,8 +48,8 @@ const LocationSelect: React.FC<LocationSelectProps> = ({
   return (
     <div className="py-10">
       <CustomContainer>
-        <h1 className="text-5xl font-semibold">Nearby Establishments</h1>
-        <div className="flex flex-wrap gap-2 mt-4">
+        <h1 className="text-3xl sm:text-5xl font-semibold">Nearby Establishments</h1>
+        <div className="flex flex-wrap gap-2 mt-4 mb-12">
           {timeDistanceItems.map((item) => (
             <div
               key={item.id}
@@ -59,26 +61,38 @@ const LocationSelect: React.FC<LocationSelectProps> = ({
                     : "bg-secondary text-slate-200 hover:bg-primary hover:text-background"
                 }`}
             >
-              <div className="text-xl font-semibold capitalize">
+              <div className="text:lg sm:text-xl font-semibold capitalize">
                 {item.durationMinutes} Mins
               </div>
             </div>
           ))}
         </div>
-
-        <div className="mt-8">
-          {selectedPlaces.map((place) => (
-            <div key={place.id} className="mb-2">
-              {place.name}
-            </div>
-          ))}
-        </div>
-
-        {selectedPlaces.length === 0 && (
-          <div className="text-center mt-8">
-            No establishments found for this time distance
-          </div>
-        )}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={`gallery-content-${selectedId}`}
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            {selectedPlaces.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-4">
+                {selectedPlaces.map((place, index) => (
+                  <GalleryCard
+                    key={place.id}
+                    index={index}
+                    src={place.imageFile}
+                    title={place.name}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-8 text-gray-500">
+                No images available in the gallery
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
       </CustomContainer>
     </div>
   );
