@@ -4,13 +4,41 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CustomContainer from "../custom/CustomContainer";
 import Image from "next/image";
+import GalleryCard from "./GalleryCard";
 
-const FacilitySelect: React.FC = () => {
+interface FacilitySelectProps {
+  title: string;
+}
+
+const FacilitySelect: React.FC<FacilitySelectProps> = ({ title }) => {
   const [isSelected, setIsSelected] = useState(true);
 
   const toggleSelection = () => {
     setIsSelected(!isSelected);
   };
+
+  const images = [
+    {
+      id: 1,
+      title: "Main Bedroom",
+      src: "/bg-facility.jpg",
+    },
+    {
+      id: 2,
+      title: "Children Bedroom",
+      src: "/bg-facility.jpg",
+    },
+    {
+      id: 3,
+      title: "Family Room",
+      src: "/bg-facility.jpg",
+    },
+    {
+      id: 4,
+      title: "Dining Room",
+      src: "/bg-facility.jpg",
+    },
+  ];
 
   return (
     <div className="py-10">
@@ -46,7 +74,17 @@ const FacilitySelect: React.FC = () => {
               exit={{ opacity: 0, y: -50 }}
               transition={{ duration: 0.3, ease: "easeInOut" }} // Added ease-in-out
             >
-              <h1 className="text-4xl font-bold">Mosque Gallery</h1>
+              <h1 className="text-4xl font-bold mb-4">{title} Gallery</h1>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-4">
+                {images.map((image, index) => (
+                  <GalleryCard
+                    key={image.id}
+                    index={index}
+                    src={image.src}
+                    title={image.title}
+                  />
+                ))}
+              </div>
             </motion.div>
           ) : (
             <motion.div
@@ -56,7 +94,7 @@ const FacilitySelect: React.FC = () => {
               exit={{ opacity: 0, y: -50 }}
               transition={{ duration: 0.3, ease: "easeInOut" }} // Added ease-in-out
             >
-              <h1 className="text-4xl font-bold mb-4">Mosque Location</h1>
+              <h1 className="text-4xl font-bold mb-4">{title} Location</h1>
               <Image
                 src="/facilityLocation.png"
                 alt="Mosque Location"

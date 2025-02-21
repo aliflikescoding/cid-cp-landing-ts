@@ -65,7 +65,7 @@ const FacilityPageRoute = async ({ params }: Props) => {
           </div>
         </CustomContainer>
       </div>
-      <FacilitySelect />
+      <FacilitySelect title={`${facility.title}`} />
     </>
   );
 };
