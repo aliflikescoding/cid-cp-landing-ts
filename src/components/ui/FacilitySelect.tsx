@@ -88,7 +88,7 @@ const FacilitySelect: React.FC<FacilitySelectProps> = ({
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-[50%] h-auto object-cover rounded-lg shadow-xl"
+                className="w-full md:w-[50%] h-auto object-cover rounded-lg shadow-xl"
               />
             </motion.div>
           )}

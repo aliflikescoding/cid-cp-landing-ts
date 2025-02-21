@@ -70,13 +70,23 @@ const FacilityPageRoute = async ({ params }: Props) => {
               <div className="absolute inset-0 bg-black opacity-45"></div>
               {/* Content */}
 
-              <div className="absolute z-20 bg-background max-w-[566px] bottom-9 right-9 p-4 text-right rounded-2xl">
+              <div className="hidden sm:block absolute z-20 bg-background max-w-[566px] bottom-9 right-9 p-4 text-right rounded-2xl">
                 <h1 className="text-3xl font-bold mb-4">{facility.title}</h1>
                 <p className="text-sm">{facility.description}</p>
               </div>
-              <div className="absolute inset-0 flex flex-col justify-center items-start text-background p-9">
-                <h1 className="text-5xl font-bold mb-4">{facility.title}</h1>
-                <p className="text-xl font-normal">{facility.subtitle}</p>
+              <div className="absolute inset-0 flex flex-col justify-between sm:justify-center items-start text-background p-4 sm:p-9">
+                <div>
+                  <h1 className="text-3xl sm:text-5xl font-bold mb-2 sm:mb-4">
+                    {facility.title}
+                  </h1>
+                  <p className="text-lg sm:text-xl font-normal">
+                    {facility.subtitle}
+                  </p>
+                </div>
+                <div className="block sm:hidden text-text bg-background max-w-[566px] bottom-9 right-9 p-2 text-left rounded-2xl">
+                  <h1 className="text-3xl font-bold mb-2">{facility.title}</h1>
+                  <p className="text-sm">{facility.description}</p>
+                </div>
               </div>
             </div>
           </div>
