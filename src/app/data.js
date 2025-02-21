@@ -483,3 +483,131 @@ export const facilityGaleries = [
     facilityId: 1,
   },
 ];
+
+export const timeDistance = [
+  {
+    id: 0,
+    durationMinutes: "5",
+    places: [
+      {
+        id: 0,
+        name: "Shell Gas Station Kemang",
+        timeDistanceId: 0,
+        imageFile: "/bg-facility.jpg",
+      },
+      {
+        id: 1,
+        name: "Giant Supermarket Bintaro",
+        timeDistanceId: 0,
+        imageFile: "/bg-facility.jpg",
+      },
+      {
+        id: 2,
+        name: "Indomaret Point Lebak Bulus",
+        timeDistanceId: 0,
+        imageFile: "/bg-facility.jpg",
+      },
+      {
+        id: 3,
+        name: "Alfamart Cilandak",
+        timeDistanceId: 0,
+        imageFile: "/bg-facility.jpg",
+      },
+    ],
+  },
+  {
+    id: 1,
+    durationMinutes: "20",
+    places: [
+      {
+        id: 4,
+        name: "Sawangan Toll Gate",
+        timeDistanceId: 1,
+        imageFile: "/bg-facility.jpg",
+      },
+      {
+        id: 5,
+        name: "Cimanggis Toll Exit",
+        timeDistanceId: 1,
+        imageFile: "/bg-facility.jpg",
+      },
+      {
+        id: 6,
+        name: "Jorr 2 Toll Gate",
+        timeDistanceId: 1,
+        imageFile: "/bg-facility.jpg",
+      },
+      {
+        id: 7,
+        name: "Bekasi Timur Toll Exit",
+        timeDistanceId: 1,
+        imageFile: "/bg-facility.jpg",
+      },
+    ],
+  },
+  {
+    id: 2,
+    durationMinutes: "10",
+    places: [
+      {
+        id: 8,
+        name: "Pacific Place Mall",
+        timeDistanceId: 2,
+        imageFile: "/bg-facility.jpg",
+      },
+      {
+        id: 9,
+        name: "Grand Indonesia Shopping Town",
+        timeDistanceId: 2,
+        imageFile: "/bg-facility.jpg",
+      },
+      {
+        id: 10,
+        name: "Mall Kelapa Gading",
+        timeDistanceId: 2,
+        imageFile: "/bg-facility.jpg",
+      },
+      {
+        id: 11,
+        name: "Pondok Indah Mall",
+        timeDistanceId: 2,
+        imageFile: "/bg-facility.jpg",
+      },
+    ],
+  },
+  {
+    id: 3,
+    durationMinutes: "35",
+    places: [
+      {
+        id: 12,
+        name: "Jakarta Central Park",
+        timeDistanceId: 3,
+        imageFile: "/bg-facility.jpg",
+      },
+      {
+        id: 13,
+        name: "Taman Mini Indonesia Indah",
+        timeDistanceId: 3,
+        imageFile: "/bg-facility.jpg",
+      },
+      {
+        id: 14,
+        name: "Ancol Dreamland",
+        timeDistanceId: 3,
+        imageFile: "/bg-facility.jpg",
+      },
+      {
+        id: 15,
+        name: "Ragunan Zoo",
+        timeDistanceId: 3,
+        imageFile: "/bg-facility.jpg",
+      },
+    ],
+  },
+  {
+    id: 4,
+    durationMinutes: "60",
+    places: [],
+  },
+];
