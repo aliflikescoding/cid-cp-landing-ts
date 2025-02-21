@@ -401,3 +401,46 @@ export const homeVirtualTour = {
   caption: "A place where you can feel the comfort of home",
   mediaFile: "/advantageBackground.png",
 };
+
+export const facilities = [
+  {
+    id: 0,
+    title: "Mosque",
+    description:
+      "Masjid kami dirancang sebagai tempat ibadah yang penuh kedamaian, memberikan ruang bagi setiap penghuni untuk mendekatkan diri kepada Tuhan dalam suasana yang khusyuk dan nyaman. Dengan desain yang indah dan fasilitas yang lengkap, masjid ini menjadi pusat spiritualitas yang menginspirasi ketenangan batin dan kedamaian jiwa.",
+    locationImageFile: "/facility/mosque.png",
+    subtitle: "A spacious place of worship for inner peace.",
+    slogan:
+      "Our mosque is designed as a peaceful place of worship, offering a space for every resident to draw closer to God in a serene and comfortable atmosphere. With its beautiful design and complete facilities, this mosque serves as a center of spirituality that inspires inner calm and peace of mind.",
+  },
+  {
+    id: 1,
+    title: "Lakeside Park",
+    description:
+      "The calming natural beauty of Lake Side Park, a beautiful park located right by the lakeside, offers a refreshing atmosphere for you and your family. With a design that blends natural beauty and modern comfort, Lake Side Park is the ideal place for relaxation, exercise, and gathering with loved ones.",
+    locationImageFile: "/facility/park.png",
+    subtitle: "Relaxation Point in the Afternoon",
+    slogan:
+      "The calming natural beauty of Lake Side Park, a beautiful park located right by the lakeside, offers a refreshing atmosphere for you and your family. With a design that blends natural beauty and modern comfort, Lake Side Park is the ideal place for relaxation, exercise, and gathering with loved ones.",
+  },
+  {
+    id: 2,
+    title: "Children Playground",
+    description:
+      "Children are the future, and they deserve to enjoy a safe, fun, and educational space to grow and develop. Our Children’s Playground is specially designed to provide an exciting and educational play experience, with various facilities that support creativity, happiness, and the development of motor skills.",
+    locationImageFile: "/facility/playground.png",
+    subtitle: "Play areas that support children's growth and development.",
+    slogan:
+      "Children are the future, and they deserve to enjoy a safe, fun, and educational space to grow and develop. Our Children’s Playground is specially designed to provide an exciting and educational play experience, with various facilities that support creativity, happiness, and the development of motor skills.",
+  },
+  {
+    id: 3,
+    title: "Jogging Track",
+    description:
+      "Discover new energy with every step on our running track. Designed for comfort and motivation, this track is the perfect place to refresh both your body and mind. Whether you're running for fitness, relaxation, or simply to enjoy some free time, each lap brings you closer to a more productive and energetic day. Start your run today and feel the difference!",
+    locationImageFile: "/facility/jogging.png",
+    subtitle: "Jogging Track",
+    slogan:
+      "Discover new energy with every step on our running track. Designed for comfort and motivation, this track is the perfect place to refresh both your body and mind. Whether you're running for fitness, relaxation, or simply to enjoy some free time, each lap brings you closer to a more productive and energetic day. Start your run today and feel the difference!",
+  },
+];
