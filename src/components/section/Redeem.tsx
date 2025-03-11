@@ -9,6 +9,7 @@ import {
   FaYoutube,
   FaWhatsapp,
 } from "react-icons/fa";
+import { Button } from "@headlessui/react";
 
 interface Company {
   name: string;
@@ -61,7 +62,7 @@ const Redeem: React.FC = async () => {
 
       {/* Content */}
       <CustomContainer className="relative z-10 py-3">
-        <div className="flex flex-col-reverse sm:flex-row lex-nowrap">
+        <div className="flex flex-col-reverse gap-4 sm:flex-row lex-nowrap">
           <div className="py-10 sm:py-20 sm:mr-5 lg:mr-10 px-4 bg-secondary text-background rounded-2xl">
             <h1 className="capitalize text-2xl font-semibold sm:mt-24 mb-10">
               build your dreams with us
@@ -109,6 +110,44 @@ const Redeem: React.FC = async () => {
           </div>
           <div className="w-full bg-background rounded-xl p-4">
             <h1 className="capitalize text-4xl font-bold">Get Brochure</h1>
+
+            <form className="mt-6 space-y-4">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium mb-1"
+                >
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="address"
+                  className="block text-sm font-medium mb-1"
+                >
+                  Address
+                </label>
+                <textarea
+                  id="address"
+                  rows={3}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  placeholder="Your full address"
+                />
+              </div>
+
+              <div className="pt-2">
+                <Button className="rounded-md bg-primary py-4 px-7 text-md font-semibold text-white transition ease-in-out duration-300 data-[hover]:bg-secondary data-[active]:bg-accent">
+                  Get Brochure
+                </Button>
+              </div>
+            </form>
           </div>
         </div>
       </CustomContainer>
