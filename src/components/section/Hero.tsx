@@ -44,9 +44,9 @@ const Hero: React.FC = async () => {
 
     return (
       <>
-        <div className="font-poppins py-[30vh]">
-          <CustomContainer className="flex xl:flex-row flex-col justify-between items-center">
-            <div className="xl:mr-12">
+        <div className="font-poppins pt-[15vh] lg:py-[30vh]">
+          <CustomContainer className="flex lg:flex-row flex-col justify-between items-center">
+            <div className="lg:mr-12">
               <h1 className="text-5xl font-bold capitalize">{hero.title}</h1>
               <p className="text-xl max-w-[620px] mt-8 mb-16">
                 {hero.description}
