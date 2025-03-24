@@ -1,4 +1,4 @@
-// facility/[slug]/route.ts
+// src/app/api/cluster-facility/[slug]/route.ts
 import { NextResponse } from "next/server";
 import { clusterFacilities } from "@/app/data"; // Import the clusterFacilities array
 
